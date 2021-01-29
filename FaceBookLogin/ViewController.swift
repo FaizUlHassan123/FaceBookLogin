@@ -10,13 +10,13 @@ import FBSDKLoginKit
 
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let loginButton = FBLoginButton()
-                loginButton.center = view.center
-                view.addSubview(loginButton)
+        loginButton.center = view.center
+        view.addSubview(loginButton)
         loginButton.permissions = ["public_profile", "email"]
         // Observe access token changes
         // This will trigger after successfully login / logout
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
             print("FB Access Token: \(String(describing: AccessToken.current?.tokenString))")
         }
     }
-
-
+    
+    
 }
 
