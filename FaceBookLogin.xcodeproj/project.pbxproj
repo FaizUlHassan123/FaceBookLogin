@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,10 @@
 		5E093F0225C45F3C007BB451 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E093F0025C45F3C007BB451 /* LaunchScreen.storyboard */; };
 		5E093F0D25C45F3C007BB451 /* FaceBookLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E093F0C25C45F3C007BB451 /* FaceBookLoginTests.swift */; };
 		5E093F1825C45F3C007BB451 /* FaceBookLoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E093F1725C45F3C007BB451 /* FaceBookLoginUITests.swift */; };
+		5E093F3925C4652B007BB451 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 5E093F3825C4652B007BB451 /* FacebookShare */; };
+		5E093F3B25C4652B007BB451 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5E093F3A25C4652B007BB451 /* FacebookCore */; };
+		5E093F3D25C4652B007BB451 /* FacebookGamingServices in Frameworks */ = {isa = PBXBuildFile; productRef = 5E093F3C25C4652B007BB451 /* FacebookGamingServices */; };
+		5E093F3F25C4652B007BB451 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 5E093F3E25C4652B007BB451 /* FacebookLogin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E093F3F25C4652B007BB451 /* FacebookLogin in Frameworks */,
+				5E093F3D25C4652B007BB451 /* FacebookGamingServices in Frameworks */,
+				5E093F3925C4652B007BB451 /* FacebookShare in Frameworks */,
+				5E093F3B25C4652B007BB451 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +152,12 @@
 			dependencies = (
 			);
 			name = FaceBookLogin;
+			packageProductDependencies = (
+				5E093F3825C4652B007BB451 /* FacebookShare */,
+				5E093F3A25C4652B007BB451 /* FacebookCore */,
+				5E093F3C25C4652B007BB451 /* FacebookGamingServices */,
+				5E093F3E25C4652B007BB451 /* FacebookLogin */,
+			);
 			productName = FaceBookLogin;
 			productReference = 5E093EF225C45F3A007BB451 /* FaceBookLogin.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 5E093EE925C45F3A007BB451;
+			packageReferences = (
+				5E093F3725C4652B007BB451 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 5E093EF325C45F3A007BB451 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -587,6 +604,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5E093F3725C4652B007BB451 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5E093F3825C4652B007BB451 /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5E093F3725C4652B007BB451 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
+		};
+		5E093F3A25C4652B007BB451 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5E093F3725C4652B007BB451 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		5E093F3C25C4652B007BB451 /* FacebookGamingServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5E093F3725C4652B007BB451 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookGamingServices;
+		};
+		5E093F3E25C4652B007BB451 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5E093F3725C4652B007BB451 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5E093EEA25C45F3A007BB451 /* Project object */;
 }
